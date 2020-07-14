@@ -1,0 +1,298 @@
+.hide-box
+  display: none
+
+.show-box
+  display block
+
+
+a:hover
+  text-decoration: none
+
+body
+  height 100%
+  font-family: 'Noto Sans TC', sans-serif
+
+.layout
+  padding-left: 120px
+  padding-right: 120px
+
+  @media screen and (max-width: 720px)
+    padding-left: 50px
+    padding-right: 50px
+
+  @media screen and (max-width: 540px)
+    padding-left: 30px
+    padding-right: 30px
+
+
+header
+  .top-header
+    background: #161616
+    height 45px
+    display flex
+    justify-content space-between
+    align-items center
+
+    .icon
+      width 19px
+      height 19px
+      filter invert(99%) sepia(98%) saturate(1%) hue-rotate(282deg) brightness(103%) contrast(100%)
+
+    .social-media
+      margin 0 8px
+
+      @media screen and (max-width: 540px)
+        margin 0 5px
+
+    .search
+      font-size: 14px
+      .dropdown-toggle
+        color white
+      
+        .icon
+          margin-right 6px
+      
+      .dropdown-menu
+        font-size 14px
+  
+      .dropdown-item.active
+        background: #aaa
+
+  nav
+    min-height 100px
+
+    .navbar-brand
+      img
+        height 57px
+
+    .collapse
+      justify-content space-between
+
+      @media (max-width: 991px)
+          max-width: 100%;
+
+        div
+          margin-top 10px
+          margin-bottom 10px
+
+        .search-box
+          width auto
+          max-width: 100%
+    
+    .search-box
+      position relative
+      width 343px
+
+      .form-inline      
+        input.search
+          width 100%
+          height 45px
+          border: solid 1px #c7c7c7
+          border-radius 23px
+          padding: 0 40px 0 15px
+          font-size 14px
+
+          ::placeholder
+            color #a6a6a6
+
+        input[type=search]::-webkit-search-cancel-button{
+          -webkit-appearance: none;
+
+          width 15px
+          height 15px
+          background-image: url('../icon/times-circle-solid.svg')
+          background-size cover
+          filter: invert(72%) sepia(7%) saturate(12%) hue-rotate(321deg) brightness(97%) contrast(81%);
+        }
+
+        button
+          position absolute
+          right 0
+          padding 0 13px 0
+          
+
+          .icon
+            width 18px
+            height 18px
+            filter: invert(13%) sepia(63%) saturate(4199%) hue-rotate(351deg) brightness(104%) contrast(121%)
+
+      .keyword-box
+        font-size 12px
+        margin-top 3px
+        overflow hidden
+        white-space nowrap
+        text-overflow ellipsis
+
+        span
+          display inline-block
+          margin-right 0.7em
+          cursor pointer
+          color #2c2c2c
+          font-weight: 500;
+
+    .option-box 
+      .icon
+        margin 0 7px
+
+      .icon:hover
+        opacity .6
+
+  .category-box
+    border-bottom #e8e8e8 1px solid
+
+    .category
+      // white-space nowrap
+      // overflow: auto
+
+      span
+        display inline-block
+        padding 20px 29px
+        color: #4f4f4f
+        letter-spacing: 0.96px
+        cursor pointer
+
+        @media screen and (max-width: 960px)
+          padding 20px 17px
+
+        @media screen and (max-width: 540px)
+          padding 20px 10px
+          
+
+      span.current
+        font-weight: bold;
+        color: #af0100;
+
+      span:hover
+        color: #af0100;
+
+main
+  padding 32px 0
+
+  .title
+    font-size: 32px
+    font-weight: 500
+    color: #111111
+
+  .new-product
+    transition: height 1s ease-in-out;
+    .product-box.show
+      height auto
+
+    .product-box
+      height 288px
+
+  .product-box
+    display flex
+    flex-wrap: wrap
+    // justify-content: space-between
+    justify-content: flex-start
+    padding-top 19px
+    margin-left -6px
+    margin-right -6px
+    overflow hidden
+
+  .product.fake
+    margin 0
+
+  .product
+    flex 1
+    min-width: 190px
+    margin 26px 6px
+
+    .product-image
+      width 100%
+      height 170px
+      // background-image url('../img/close-up-photo-of-wristwatch-2113994.jpg')
+      background-image url('../img/bottles-on-green-and-brown-moss-3259584.jpg')
+      background-size cover
+      background-position center
+
+    .info
+      margin-top 8px
+
+      .product-name
+        color #4b4b4b
+        font-size: 14px
+        line-height: 1.36
+        letter-spacing: 0.63px
+
+      .product-category
+        color: #acacac
+        line-height: 1.5
+        letter-spacing: 0.6px
+        font-size: 12px
+        margin-top 6px
+
+      .product-price
+        font-size: 14px;
+        line-height: 1.43;
+        color: #af0100;
+        margin-top 3px
+
+  .more-box
+    margin-top 17px
+    text-align: center
+
+    button
+      width: 190px;
+      height: 40px;
+      border: solid 1px #cbcbcb;
+      font-size: 14px;
+      text-align: center;
+      color: #535353;
+      background: white
+      cursor pointer
+
+footer
+  .gray
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 233px;
+    background-color: #f5f5f5;
+
+    @media screen and (max-width: 1220px)
+      flex-direction: column
+      align-items: flex-start
+      padding-top 30px
+      padding-bottom 30px
+      height auto
+
+      .info
+        margin-left: 15px
+
+        .title
+          margin-top 25px
+          margin-bottom 10px
+
+
+  .info-box
+    flex 1
+    display flex
+    justify-content: space-between
+
+  .info.contact .content span
+    display block
+
+  .info
+    letter-spacing: 0.72px;
+    .title
+      font-family: Poppins, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #141414;
+      margin-bottom 18px
+
+    .content
+      span, a
+        margin-right 18px
+        color: #141414
+
+  .black
+    width: 100%
+    padding 8px 0;
+    font-size: 14px;
+    letter-spacing: 0.63px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #333;
