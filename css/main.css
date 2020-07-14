@@ -124,6 +124,11 @@ header nav .search-box .keyword-box {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+@media (max-width: 991px) {
+  header nav .search-box .keyword-box {
+    display: none;
+  }
+}
 header nav .search-box .keyword-box span {
   display: inline-block;
   margin-right: 0.7em;
